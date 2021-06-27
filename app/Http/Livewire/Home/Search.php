@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Home;
 use App\Models\Anime;
 use Livewire\Component;
+use App\Models\Menu as MenuDb;
 
 class Search extends Component
 {
@@ -18,6 +19,8 @@ class Search extends Component
 
     public function render()
     {
-        return view('livewire.home.search');
+        return view('livewire.home.search')->layout('layouts.app', [
+            'ListMenu' => MenuDb::orderBy('Position')->get()
+        ]);
     }
 }

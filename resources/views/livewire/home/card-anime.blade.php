@@ -13,7 +13,7 @@
             alt="">
     </a>
     <span
-        class="text-white text-center absolute bottom-0 bg-transparent py-2 group-hover:opacity-0 z-20 transition ease-in-out duration-500 rounded-b-md"><a
+        class="text-white text-center px-1 absolute bottom-0 bg-transparent py-2 group-hover:opacity-0 z-20 transition ease-in-out duration-500 rounded-b-md"><a
             href="{{route('anime', $Anime->id)}}">{{$Anime->AnimeName}}</a></span>
 
     <span

@@ -32,7 +32,7 @@ class Tags extends Component
 
         $this->dispatchBrowserEvent('swal:added', [
             'type'=>'success',
-            'title'=>'สำเร็จ!!',
+            'title'=>'สำเร็จ!',
             'text' => 'บันทึกข้อมูลสำเร็จ'
         ]);
     }
@@ -48,6 +48,11 @@ class Tags extends Component
 
         $this->isDialogOpenEdit = false;
         $this->search = "";
+        $this->dispatchBrowserEvent('swal:added', [
+            'type'=>'success',
+            'title'=>'สำเร็จ!',
+            'text' => 'อัพเดทข้อมูลสำเร็จ'
+        ]);
     }
 
     public function editModal($id){

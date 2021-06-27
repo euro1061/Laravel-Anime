@@ -29,31 +29,15 @@
             <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
                 id="example-collapse-navbar">
                 <ul class="flex flex-col lg:flex-row list-none mr-auto">
+                    @foreach ($ListMenu as $Menu)
                     <li class="flex items-center">
                         <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-1 py-4 lg:py-2 flex items-center text-xs uppercase text-base ml-5"
-                            href="{{route('home')}}">
-                            หน้าหลัก</a>
+                            href="{{$Menu->MenuLink}}">
+                            {{$Menu->MenuName}}</a>
                     </li>
-                    <li class="flex items-center">
-                        <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-1 py-4 lg:py-2 flex items-center text-xs uppercase text-base ml-5"
-                            href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/landing">
-                            รายการทีวี</a>
-                    </li>
-                    <li class="flex items-center">
-                        <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-1 py-4 lg:py-2 flex items-center text-xs uppercase text-base ml-5"
-                            href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/landing">
-                            ภาพยนตร์</a>
-                    </li>
-                    <li class="flex items-center">
-                        <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-1 py-4 lg:py-2 flex items-center text-xs uppercase text-base ml-5"
-                            href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/landing">
-                            มาใหม่และกำลังฮิต</a>
-                    </li>
-                    <li class="flex items-center">
-                        <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-1 py-4 lg:py-2 flex items-center text-xs uppercase text-base ml-5"
-                            href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/landing">
-                            รายการของฉัน</a>
-                    </li>
+                    @endforeach
+                    
+                    
                 </ul>
                 <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
                     <li class="flex items-center">

@@ -20,6 +20,7 @@ Route::group(['middleware'=> 'guest'], function(){
 Route::group(['middleware'=> 'auth'], function(){
     Route::get('/admin', [\App\Http\Livewire\Admin\Index::class, '__invoke'])->name('admin');
     Route::get('/admin/tags', [\App\Http\Livewire\Admin\Tags::class, '__invoke'])->name('tags');
+    Route::get('/admin/menu', [\App\Http\Livewire\Admin\Menu::class, '__invoke'])->name('menu');
     Route::get('/admin/anime', [\App\Http\Livewire\Admin\CAnime::class, '__invoke'])->name('cAnime');
     Route::get('/admin/anime/add', [\App\Http\Livewire\Admin\AAnime::class, '__invoke'])->name('aAnime');
     Route::get('/admin/anime/update/{id}', [\App\Http\Livewire\Admin\UAnime::class, '__invoke'])->name('uAnime');
@@ -28,5 +29,6 @@ Route::group(['middleware'=> 'auth'], function(){
 Route::get('/', [\App\Http\Livewire\Home\Index::class, '__invoke'])->name('home');
 Route::get('/anime/{id}', [\App\Http\Livewire\Anime\Index::class, '__invoke'])->name('anime');
 Route::get('/search/{text}', [\App\Http\Livewire\Home\Search::class, '__invoke'])->name('search');
+Route::get('/tag/{id}', [\App\Http\Livewire\Home\Tag::class, '__invoke'])->name('Tag');
 
 Route::get('/anime/{id}/play/{epid}', [\App\Http\Livewire\Play::class, '__invoke'])->name('play');

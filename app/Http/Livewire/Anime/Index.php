@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Anime;
 use App\Models\Anime;
 use App\Models\AnimeTags;
+use App\Models\Menu as MenuDb;
 use App\Models\Episode;
 use Livewire\Component;
 
@@ -29,6 +30,8 @@ class Index extends Component
 
     public function render()
     {
-        return view('livewire.anime.index');
+        return view('livewire.anime.index')->layout('layouts.app', [
+            'ListMenu' => MenuDb::orderBy('Position')->get()
+        ]);
     }
 }

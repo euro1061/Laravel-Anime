@@ -14,6 +14,14 @@ class AnimeTags extends Model
     public function Tag(){
         return $this->hasOne(Tag::class, 'id', 'TagId');
     }
-    
+
+    public function Anime(){
+        return $this->hasOne(Anime::class, 'id', 'AnimeId');
+    }
+
+    public function AnimePost()
+    {
+        return $this->belongsTo(Anime::class, 'id', 'AnimeId');
+    }
     use HasFactory;
 }

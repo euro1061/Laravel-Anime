@@ -15,5 +15,10 @@ class Anime extends Model
         'CoverImage',
         'PosterImage'
     ];
+
+    public function AnimeTags(){
+        return $this->hasMany(AnimeTags::class, 'AnimeId' ,'id');
+    }
+
     use HasFactory;
 }
